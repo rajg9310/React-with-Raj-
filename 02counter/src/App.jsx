@@ -12,13 +12,16 @@ let [counter,setCounter] =  useState(15)
 
  const addValue = ()=>{
    
-    counter = counter + 1 ;
-    setCounter(counter)
+    // counter = counter + 1 ;
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
     //  console.log("Clicked", counter)
 }
 
 const removeValue = ()=>{
-  if(counter>0){
+  if(counter>=0){
     setCounter(counter - 1);
   }
 }
